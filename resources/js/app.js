@@ -1,1 +1,9 @@
-require('./bootstrap');
+import './bootstrap';
+
+import './my-script';
+
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();

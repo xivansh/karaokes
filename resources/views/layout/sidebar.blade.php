@@ -19,7 +19,7 @@
             </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{ route('karaokes.index') }}" class="nav-link">   
+                        <a href="{{ route('karaokes.index') }}" class="nav-link">
                         <i class="nav-icon 	fas fa-pencil-alt"></i>
                             <p>Pesan Room </p>
                         </a>
@@ -41,18 +41,16 @@
                     <i class="nav-icon fas fa-cubes"></i>
                     <p>Ekspedisi</p>
                 </a>
-            </li>  
+            </li>
        @endcan
         <br>
 
         <li class="nav-item">
-            <a href="/logout" class="nav-link">
+            <a href="{{ route('logout') }}" class="nav-link">
                 <i class="nav-icon fas fa fa-sign-out-alt"></i>
                 <p>Log Out</p>
             </a>
         </li>
-
-
 
 
     </ul>

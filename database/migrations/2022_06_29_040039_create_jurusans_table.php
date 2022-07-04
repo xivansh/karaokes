@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('check_outs', function (Blueprint $table) {
-            $table->unsignedBigInteger('price_id')->nullable();
-            $table->foreign('price_id')->references('id')->on('karaokes');
+        Schema::create('jurusans', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_jurusan');
+            $table->string('nama_dekan');
+            $table->integer('jumlah_mahasiswa');
+            $table->timestamps();
         });
     }
 
@@ -26,8 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('check_outs', function (Blueprint $table) {
-            $table->dropForeign('price_id');
-        });
+        Schema::dropIfExists('jurusans');
     }
 };
